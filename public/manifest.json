@@ -1,0 +1,27 @@
+{
+  "name": "Telas & Redes Paranavaí",
+  "short_name": "Telas & Redes",
+  "description": "Especialistas em telas mosquiteiras, redes de proteção e soluções sob medida em Paranavaí e região.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2C5530",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/img/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "lifestyle"],
+  "lang": "pt-BR",
+  "dir": "ltr"
+}
