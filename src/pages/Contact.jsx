@@ -152,7 +152,9 @@ const Contact = () => {
                     <option value="">Selecione um serviço</option>
                     <option value="telas-mosquiteiras">Telas Mosquiteiras</option>
                     <option value="rede-protecao">Rede de Proteção</option>
-                    <option value="telas-portas">Telas para Portas</option>
+                    <option value="porta-mosquiteira">Porta Mosquiteira</option>
+                    <option value="manutencao-rede">Manutenção de Rede</option>
+                    <option value="conserto-tela">Conserto de Tela Mosquiteiro</option>
                     <option value="outros">Outros</option>
                   </select>
                 </div>
