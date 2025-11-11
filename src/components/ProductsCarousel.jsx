@@ -42,15 +42,6 @@ const ProductsCarousel = () => {
     return `https://lh3.googleusercontent.com/d/${fileId}=s500`;
   };
 
-  // Produtos de fallback
-  const fallbackProducts = [
-    { name: "AREZO", image: "/assets/img/hero.jpeg" },
-    { name: "COBOGÓ", image: "/assets/img/cta.jpeg" },
-    { name: "DELFOS", image: "/assets/img/sobre.png" },
-    { name: "MOLEDO", image: "/assets/img/hero.jpeg" },
-    { name: "ERETRIA", image: "/assets/img/cta.jpeg" }
-  ];
-
   // Carregar produtos
   useEffect(() => {
     const loadProducts = async () => {
@@ -58,8 +49,8 @@ const ProductsCarousel = () => {
         const destaquesResult = await fetchDriveImages(DRIVE_FOLDERS.destaques);
 
         if (destaquesResult.error || !destaquesResult.files || destaquesResult.files.length === 0) {
-          console.warn("Usando produtos de fallback");
-          setProducts(fallbackProducts);
+          console.warn("Nenhuma imagem de destaques encontrada no Google Drive");
+          setProducts([]);
         } else {
           const produtosDestaque = destaquesResult.files.map((image) => ({
             id: image.id,
@@ -70,7 +61,7 @@ const ProductsCarousel = () => {
         }
       } catch (error) {
         console.error("Erro ao carregar produtos:", error);
-        setProducts(fallbackProducts);
+        setProducts([]);
       } finally {
         setIsLoading(false);
       }
@@ -155,6 +146,19 @@ const ProductsCarousel = () => {
           <div className="loading-carousel">
             <i className="fas fa-spinner fa-spin"></i>
             <p>Carregando destaques...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (products.length === 0) {
+    return (
+      <div className="products-carousel">
+        <div className="carousel-container">
+          <div className="loading-carousel">
+            <i className="fas fa-info-circle"></i>
+            <p>Nenhum destaque disponível no momento</p>
           </div>
         </div>
       </div>
