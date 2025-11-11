@@ -14,6 +14,9 @@ export default function HomePage() {
         <meta name="author" content="Telas & Redes Paranavaí" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="rVI6U1mIT6RZ2COig8tbpIRAZIAM_aIvVrmDdV_DUlE" />
+        
         {/* Canonical URL */}
         <link rel="canonical" href="https://telaseredes.vercel.app/" />
         
